@@ -1,0 +1,14 @@
+#main-header, .recipe-list {
+    font-family: cursive
+}
+
+#main-header {
+    background-color: rgb(207, 104, 104);
+    box-shadow: 10px 10px 5px grey;
+    text-align: center;
+}
+
+.recipe-list {
+    font-size: 15px;
+}
+
