@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="left-container">
+        <div class="image-bar">
+            <img src="assets/odin-lined.png" class="odin-image">
+            Odin
+        </div>
+    </div>
+    <div class="right-container">
+        <p class="signup-text">This is not a real online service! You know you need something like this in your life to
+            help you realize
+            your deepest dreams. Sign up now to get started.</p>
+        <p class="teaser-text">You know you want to.</p>
+        <div id="form-container">
+            <p class="motivation-text">Let's do this!</p>
+            <form id="my-form">
+                <div class="grid-container">
+                    <div class="form-input">
+                        <input size="14" type="text" id="first-name" name="firstName">
+                        <label for="first-name">FIRST NAME</label>
+                    </div>
+
+                    <div class="form-input">
+                        <input size="14" type="text" id="last-name" name="lastName">
+                        <label for="last-name">LAST NAME</label>
+                    </div>
+                    <div class="form-input">
+                        <input size="14" type="email" id="email" name="email">
+                        <label for="email">EMAIL</label>
+                    </div>
+                    <div class="form-input">
+                        <input size="14" type="tel" id="phone-number" name="phoneNumber">
+                        <label for="phone-number">PHONE NUMBER</label>
+                    </div>
+                    <div class="form-input">
+                        <input size="14" type="password" id="password" name="passWord">
+                        <label for="password">PASSWORD</label>
+                    </div>
+                    <div class="form-input">
+                        <input size="14" type="password" id="confirm-password" name="confirmPassword">
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <button type="submit" class="submit" form="my-form">Create Account</button>
+        <p class="login">Already have an account? Log in</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+@font-face {
+    font-family: odin-font;
+    src: url(assets/Norse-Bold.otf);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+.left-container {
+    background-image: url(assets/albert-stoynov-Opwvoz9zwYk-unsplash.jpg);
+    background-size: cover;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-container {
+    width: 65vw;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.right-container > * {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.motivation-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+#form-container {
+    background-color: white;
+    height: 350px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 200px;
+    width: calc(65vw - 50px - 200px);
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    height: 200px;
+}
+
+.image-bar {
+    font-family: odin-font, sans-serif;
+    background-color: rgb(10, 10, 10, 0.3);
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.odin-image {
+    width: 100px;
+    height: 100px;
+}
+
+.signup-text, .teaser-text {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.submit {
+    margin-top: 30px;
+    background-color: #596D48;
+    border-width: 0;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    transition-duration: 0.2s;
+}
+
+.submit:hover {
+    background-color: rgb(238, 36, 36);
+}
+
+.submit:active{
+    transform: scale(1.1);
+}
+
+.login {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
