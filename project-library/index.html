@@ -8,10 +8,36 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Library</h1>
-    <button>Add Book</button>
+    <h1 class="header">My Digital Library</h1>
+    <div class="modal-container">
+        <form class="book-form">
+            <div class="input">
+                <label for="author">Enter Author Name:</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+
+            <div class="input">
+                <label for="title">Enter Book Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="input">
+                <label for="num-pages">Enter Number of Pages:</label>
+                <input type="number" id="num-pages" name="num-pages" min="1" required>
+            </div>
+
+            <div class="input">
+                <label for="has-read">Read</label>
+                <input type="radio" id="has-read" value="true" name="book-read">
+                <label for="has-read">Not Read</label>
+                <input type="radio" id="has-not-read" value="false" name="book-read" required>
+            </div>
+            <button type="submit" class="submit-button">Upload Your Book!</button>
+        </form>
+    </div>
     <div class="library-container">
     </div>
+    <button class="add-book">Add Your Book</button>
     <script src="script.js"></script>
 </body>
 </html>
