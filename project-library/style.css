@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: beige;
 }
 
 @font-face {
@@ -20,7 +21,6 @@ body {
     gap: 22px;
     flex-wrap: wrap;
     width: calc(100vw - 37px);
-    height: 100vh;
     justify-content: center;
     padding: 10px;
 }

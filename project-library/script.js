@@ -1,16 +1,10 @@
-/**
- * Constructor for a Book object.
- * 
- * @param {string} author - The author of the book.
- * @param {string} title - The title of the book.
- * @param {int} numPages - The number of pages in the book.
- * @param {boolean} hasRead - A flag indicating whether the book has been read or not.
- */
-function createBook(author, title, numPages, hasRead) {
-    this.author = author
-    this.title = title
-    this.numPages = numPages
-    this.hasRead = hasRead
+class createBook {
+    constructor(author, title, numPages, hasRead) {
+        this.author = author
+        this.title = title
+        this.numPages = numPages
+        this.hasRead = hasRead
+    }
 }
 
 /**
@@ -124,6 +118,40 @@ const initializeBookForm = (form, libraryContainer, library) => {
         const book = new createBook(values[0], values[1], parseInt(values[2]), values[3] === 'true')
 
         displayBook(libraryContainer, library, book)
+        modalContainer.close()
+        resetFormFields()
+    })
+}
+
+/**
+ * Goes through each form field and resets them to empty values for the next book insertion.
+ */
+const resetFormFields = () => {
+    const form = document.querySelector(".book-form")
+    form.reset()
+}
+
+/**
+ * Event listener for the form open and form close buttons.
+ * @param {HTMLDialogElement} modalContainer 
+ * @param {HTMLButtonElement} openBookForm 
+ * @param {HTMLButtonElement} closeBookForm 
+ */
+const initializeFormButtons = (modalContainer, openBookForm, closeBookForm) => {
+    openBookForm.addEventListener("click", () => {
+        modalContainer.showModal()
+    })
+    
+    closeBookForm.addEventListener("click", () => {
+        resetFormFields()
+        modalContainer.close()
+    })
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            resetFormFields()
+            modalContainer.close()
+        }
     })
 }
 
@@ -133,3 +161,11 @@ const library = [];
 let numBooks = 0;
 
 initializeBookForm(bookForm, libraryContainer, library)
+
+const modalContainer = document.querySelector(".modal-container")
+const openBookForm = document.querySelector(".add-book")
+const closeBookForm = document.querySelector(".close-button")
+
+initializeFormButtons(modalContainer, openBookForm, closeBookForm)
+
+

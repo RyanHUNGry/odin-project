@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class="header">My Digital Library</h1>
-    <div class="modal-container">
+    <dialog class="modal-container">
         <form class="book-form">
             <div class="input">
                 <label for="author">Enter Author Name:</label>
@@ -33,8 +33,9 @@
                 <input type="radio" id="has-not-read" value="false" name="book-read" required>
             </div>
             <button type="submit" class="submit-button">Upload Your Book!</button>
+            <button type="button" class="close-button">Cancel</button>
         </form>
-    </div>
+    </dialog>
     <div class="library-container">
     </div>
     <button class="add-book">Add Your Book</button>
